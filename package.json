@@ -15,6 +15,27 @@
     "watch-incidents": "cds watch --open ns.incidents/index.html?sap-ui-xx-viewCache=false --livereload false",
     "launchpage": "cds watch --open /launchpage.html#Shell-home"
   },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "alice": {
+              "roles": [
+                "support"
+              ]
+            },
+            "bob": {
+              "roles": [
+                "support"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
   "private": true,
   "workspaces": [
     "app/*"
